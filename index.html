@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LatinChat - Sala de Chat Retro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td bgcolor="#C0C0C0" height="30">
+                <marquee>¡Bienvenido a LatinChat! - El chat más retro de la web</marquee>
+            </td>
+        </tr>
+        <tr>
+            <td height="400">
+                <table width="100%" height="100%">
+                    <tr>
+                        <td width="200" bgcolor="#E0E0E0" valign="top">
+                            <b>Usuarios Online (<span id="userCount">0</span>)</b><br>
+                            <div id="userList"></div>
+                            <hr>
+                            <b>Salas:</b><br>
+                            <a href="#" onclick="joinRoom('general')">General</a><br>
+                            <a href="#" onclick="joinRoom('musica')">Música</a><br>
+                            <a href="#" onclick="joinRoom('amor')">Amor</a><br>
+                        </td>
+                        <td valign="top">
+                            <div id="chatWindow">
+                                <div id="chatMessages" style="height: 350px; overflow-y: scroll; border: 2px inset; background: white; padding: 5px;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#C0C0C0" height="50">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <input type="text" id="messageInput" placeholder="Escribe tu mensaje..." style="width: 70%;">
+                            <input type="button" value="Enviar" onclick="sendMessage()">
+                            <input type="button" value="Conectar" id="connectBtn" onclick="connect()">
+                            <span id="status" class="disconnected">Desconectado</span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #C0C0C0; border: 2px outset; padding: 20px;">
+        <b>Ingresa al Chat</b><br><br>
+        Nickname: <input type="text" id="nickname" maxlength="15"><br><br>
+        <input type="button" value="Entrar" onclick="login()">
+        <input type="button" value="Cancelar" onclick="closeModal()">
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

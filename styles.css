@@ -1,0 +1,119 @@
+/* Estilos CSS retro para LatinChat */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000080;
+    background-image: url('data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wjRLEuQRNnGt7QpVdNhHJBkaIrdoyiiRWAI3RYODBawuYn3I4EoQDhVwrUgAAIfkECQoAAAAsAAAAABAAEAAAAzIIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wjRLEuQRNnGt7QpVdNhHJBkaIrdoyiiRWAI3RYODBawuYn3I4EoQDhVwrUgAAOw==');
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    color: #FFFF00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #FF00FF;
+    text-decoration: blink;
+}
+
+input[type="text"], select {
+    border: 2px inset;
+    background-color: #FFFFFF;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 2px;
+}
+
+input[type="button"] {
+    border: 2px outset;
+    background-color: #C0C0C0;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 3px 8px;
+}
+
+input[type="button"]:active {
+    border: 2px inset;
+}
+
+input[type="button"]:disabled {
+    background-color: #808080;
+    color: #404040;
+    cursor: not-allowed;
+}
+
+#chatWindow {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+#chatMessages {
+    line-height: 1.2;
+}
+
+/* Efectos retro */
+blink {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+marquee {
+    font-weight: bold;
+}
+
+/* Scrollbar retro */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #C0C0C0;
+    border: 1px inset #C0C0C0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #808080;
+    border: 1px outset #808080;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #606060;
+}
+
+/* Modal styles */
+#loginModal {
+    font-family: Arial;
+}
+
+#loginModal input, #loginModal select {
+    margin: 2px;
+}
+
+/* Estados de conexión */
+.connected {
+    color: #00FF00;
+}
+
+.disconnected {
+    color: #FF0000;
+}
+
+/* Efectos de hover para enlaces de salas */
+td a:hover {
+    background-color: #FFFF00;
+    color: #000000;
+    padding: 1px 2px;
+}
